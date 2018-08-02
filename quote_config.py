@@ -7,7 +7,7 @@ API_URL = "https://quote.cnbc.com/quote-html-webservice/quote.htm?" \
 
 
 def get_quote(symbol="GOOG"):
-    result = None
+    result = ""
     if not symbol or symbol == "":
         return result
     try:
@@ -18,14 +18,17 @@ def get_quote(symbol="GOOG"):
             # print(response.status)
             if response.status == 200:
                 quote_data = json.loads(response.data.decode('utf-8'))
-                # print(quote_data)
-                result = {
-                    "symbol": symbol,
-                    "change_percent": quote_data["QuickQuoteResult"]["QuickQuote"]["change_pct"],
-                    "change": quote_data["QuickQuoteResult"]["QuickQuote"]["change"],
-                    "type": quote_data["QuickQuoteResult"]["QuickQuote"]["assetType"],
-                    "last_price": quote_data["QuickQuoteResult"]["QuickQuote"]["last"]
-                }
+                if quote_data["QuickQuoteResult"]["QuickQuote"]["code"] == '0':
+                    # print(quote_data)
+                    result = {
+                        "symbol": symbol,
+                        "change_percent": quote_data["QuickQuoteResult"]["QuickQuote"]["change_pct"],
+                        "change": quote_data["QuickQuoteResult"]["QuickQuote"]["change"],
+                        "type": quote_data["QuickQuoteResult"]["QuickQuote"]["assetType"],
+                        "last_price": quote_data["QuickQuoteResult"]["QuickQuote"]["last"]
+                    }
+                else:
+                    return result
     except Exception as e:
         print(e)
     finally:

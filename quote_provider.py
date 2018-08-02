@@ -5,7 +5,9 @@ def get_all_quotes(symbols=[]):
     quote_result = []
     if symbols:
         for symbol in symbols:
-            quote_result.append(get_quote(symbol))
+            symbol_data = get_quote(symbol)
+            if symbol_data:
+                quote_result.append(symbol_data)
         return quote_result
     return quote_result
 

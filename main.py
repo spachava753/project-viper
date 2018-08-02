@@ -29,7 +29,9 @@ def home(symbol=""):
         else:
             symbols = []
 
-        response = make_response(render_template("home.html", quotes=get_all_quotes(symbols)))
+        quotes = get_all_quotes(symbols)
+
+        response = make_response(render_template("home.html", quotes=quotes))
 
         if symbols:
             cookie_symbols = ','.join(symbols)
