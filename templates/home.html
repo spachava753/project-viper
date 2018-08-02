@@ -22,6 +22,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+    <!--
     <table class="table table-sm table-dark">
       <tbody>
         <tr>
@@ -40,18 +41,37 @@
         {% endfor %}
       </tbody>
     </table>
-    <!--
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown button
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
     -->
+
+    <table class="table table-sm table-dark">
+      <tbody>
+        <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Change</th>
+            <th scope="col">Change Percent</th>
+            <th scope="col">Last Price</th>
+        </tr>
+        {% for quote in quotes %}
+        <tr>
+          <th scope="row">
+              <div class="dropdown">
+                  <div class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ quote["symbol"] }}
+                  </div>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href='/{{ quote["symbol"] }}'>Delete</a>
+                  </div>
+                </div>
+          </th>
+          <td>{{ quote["change"] }}</td>
+          <td>{{ quote["change_percent"] }}</td>
+          <td>{{ quote["last_price"] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
