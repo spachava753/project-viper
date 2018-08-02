@@ -187,3 +187,5 @@ htmlcov/
 .coverage
 .coverage.*
 *,cover
+
+quote_config.py
