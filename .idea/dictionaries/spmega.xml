@@ -2,6 +2,7 @@
   <dictionary name="spmega">
     <words>
       <w>goog</w>
+      <w>tablename</w>
     </words>
   </dictionary>
 </component>

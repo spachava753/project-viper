@@ -7,11 +7,9 @@ import datetime
 import random
 import hashlib
 
-app = Flask(__name__)
 
-
-@app.route("/", methods=["POST", "GET"])
-@app.route("/<symbol>", methods=["POST", "GET"])
+"""@app.route("/", methods=["POST", "GET"])"""
+"""@app.route("/<symbol>", methods=["POST", "GET"])"""
 def home(symbol=""):
     if not symbol:
         print("Add Symbol")
@@ -99,6 +97,7 @@ def remove_symbol(symbol):
 
 
 if __name__ == "__main__":
+    app = Flask(__name__)
     rand_int = str(random.randint(1, 1001))
     app.secret_key = hashlib.sha256(rand_int.encode()).hexdigest()
     app.run(port=8080, debug=True)
