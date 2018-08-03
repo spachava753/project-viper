@@ -41,6 +41,8 @@ def home(symbol=""):
 
         return response
     else:
+        return remove_symbol(symbol)
+
         print("Remove Symbol")
         symbols = request.cookies.get("symbols")
         if symbols:
@@ -66,6 +68,34 @@ def home(symbol=""):
             response = make_response(render_template("home.html", quotes=get_all_quotes(symbols)))
 
         return response
+
+
+def remove_symbol(symbol):
+    print("Remove Symbol")
+    symbols = request.cookies.get("symbols")
+    if symbols:
+        symbol = symbol.upper()
+        if ',' in symbols:
+            symbols = symbols.split(',')
+            symbols.remove(symbol)
+            symbols = set(symbols)
+        else:
+            symbols = []
+
+        response = make_response(render_template("home.html", quotes=get_all_quotes(symbols)))
+
+        if symbols:
+            cookie_symbols = ','.join(symbols)
+            print(cookie_symbols)
+        else:
+            cookie_symbols = ""
+
+        expires = datetime.datetime.now() + datetime.timedelta(365)
+        response.set_cookie("symbols", cookie_symbols, expires=expires)
+    else:
+        response = make_response(render_template("home.html", quotes=get_all_quotes(symbols)))
+
+    return response
 
 
 if __name__ == "__main__":
