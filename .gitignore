@@ -189,4 +189,4 @@ htmlcov/
 *,cover
 
 quote_config.py
-tutorial.db
+*.db
