@@ -8,7 +8,6 @@ def get_all_quotes(symbols=[]):
             symbol_data = get_quote(symbol)
             if symbol_data:
                 quote_result.append(symbol_data)
-        return quote_result
     return quote_result
 
 

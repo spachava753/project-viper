@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,37 +11,48 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#"><h1>Watchlist app</h1></a>
 
-    <h1>Watchlist app</h1>
+        <ul class="list-inline">
+          <li class="active list-inline-item mr-auto">
+            <a class="nav-link align-bottom" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="list-inline-item mr-auto">
+            <a class="nav-link align-bottom" href="#">Link</a>
+          </li>
+          <li class="dropdown list-inline-item mr-auto">
+            <a class="nav-link align-bottom dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="list-inline-item mr-auto">
+            <a class="align-bottom disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+    </nav>
 
-    <form action="/" method="post">
-        <div class="form-group">
-            <label for="symbol">Symbol</label>
-            <input type="text" class="form-control" id="symbol" name="symbol" placeholder="GOOG">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <form method="post" action="/get-watchlist" class="w-25 mx-auto">
+        <select class="custom-select custom-select-lg mb-3">
+          <option selected>{{ current_watchlist.name }}</option>
+          {% for watchlist in watchlists %}
+          <option value="{{ watchlist.name }}">{{ watchlist.name }}</option>
+          {% endfor %}
+        </select>
     </form>
 
-    <!--
-    <table class="table table-sm table-dark">
-      <tbody>
-        <tr>
-          <th scope="col">Symbol</th>
-          <th scope="col">Change</th>
-          <th scope="col">Change Percent</th>
-          <th scope="col">Last Price</th>
-        </tr>
-        {% for quote in quotes %}
-        <tr>
-          <th scope="row">{{ quote["symbol"] }}</th>
-          <td>{{ quote["change"] }}</td>
-          <td>{{ quote["change_percent"] }}</td>
-          <td>{{ quote["last_price"] }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    -->
+    <form class="form-inline" action="/" method="post">
+      <div class="form-group mx-sm-3 mb-2">
+        <input type="text" class="form-control" placeholder="GOOG">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Add Symbol</button>
+    </form>
 
     <table class="table table-sm table-dark">
       <tbody>
@@ -60,7 +71,7 @@
                   </div>
 
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href='/{{ quote["symbol"] }}'>Delete</a>
+                      <button class="dropdown-item" type="button" name='{{ quote["symbol"] }}' >Delete</button>
                   </div>
                 </div>
           </th>
