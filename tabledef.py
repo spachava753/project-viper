@@ -7,16 +7,27 @@ from sqlalchemy.orm import relationship, backref, sessionmaker
 engine = create_engine('sqlite:///viper.db', echo=True)
 Base = declarative_base()
 
+
 def get_sqlite_session():
     SqliteSession = sessionmaker(bind=engine)
     return SqliteSession()
+
+
+id_increment = 7
+
+
+def id_generator():
+    global id_increment
+    id_increment += 1
+    return id_increment
+
 
 ########################################################################
 class User(Base):
     """"""
     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, default=id_generator)
     username = Column(String)
     password = Column(String)
     watchlists = relationship("Watchlist")
@@ -26,14 +37,15 @@ class User(Base):
         """"""
         self.username = username
         self.password = password
-        self.id = id
+        if id:
+            self.id = id
 
 
 class Watchlist(Base):
     """"""
     __tablename__ = "watchlists"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, default=id_generator)
     watchlist_items = relationship("WatchlistItem")
     user_id = Column(Integer, ForeignKey('users.id'))
     name = Column(String)
@@ -45,14 +57,15 @@ class Watchlist(Base):
         self.user_id = user_id
         self.name = name
         self.description = description
-        self.id = id
+        if id:
+            self.id = id
 
 
 class WatchlistItem(Base):
     """"""
     __tablename__ = "watchlist_items"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, default=id_generator)
     watchlist_id = Column(Integer, ForeignKey('watchlists.id'))
     symbol_id = Column(Integer, ForeignKey('symbols.id'))
     symbol = relationship("Symbol")
@@ -62,14 +75,15 @@ class WatchlistItem(Base):
         """"""
         self.watchlist_id = watchlist_id
         self.symbol_id = symbol_id
-        self.id = id
+        if id:
+            self.id = id
 
 
 class Symbol(Base):
     """"""
     __tablename__ = "symbols"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, default=id_generator)
     name = Column(String)
     symbol = Column(String)
 
@@ -78,7 +92,8 @@ class Symbol(Base):
         """"""
         self.name = name
         self.symbol = symbol
-        self.id = id
+        if id:
+            self.id = id
 
 
 # create tables

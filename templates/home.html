@@ -47,41 +47,39 @@
         </select>
     </form>
 
-    <form class="form-inline" action="/" method="post">
+    <form class="form-inline" action="/add-symbol" method="post">
       <div class="form-group mx-sm-3 mb-2">
-        <input type="text" class="form-control" placeholder="GOOG">
+        <input type="text" class="form-control" name="symbol" placeholder="GOOG">
       </div>
+        <input type="text" readonly name="watchlist-name" value="{{ current_watchlist.name }}" style="visibility: hidden;" />
       <button type="submit" class="btn btn-primary mb-2">Add Symbol</button>
     </form>
 
-    <table class="table table-sm table-dark">
-      <tbody>
-        <tr>
-            <th scope="col">Symbol</th>
-            <th scope="col">Change</th>
-            <th scope="col">Change Percent</th>
-            <th scope="col">Last Price</th>
-        </tr>
-        {% for quote in quotes %}
-        <tr>
-          <th scope="row">
-              <div class="dropdown">
-                  <div class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ quote["symbol"] }}
-                  </div>
-
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <button class="dropdown-item" type="button" name='{{ quote["symbol"] }}' >Delete</button>
-                  </div>
-                </div>
-          </th>
-          <td>{{ quote["change"] }}</td>
-          <td>{{ quote["change_percent"] }}</td>
-          <td>{{ quote["last_price"] }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <form action="/delete-symbol" method="post">
+        <button type="submit" class="btn btn-primary inline" name="Submit">Delete</button>
+        <table class="table table-sm table-dark">
+          <tbody>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Change</th>
+                <th scope="col">Change Percent</th>
+                <th scope="col">Last Price</th>
+            </tr>
+            {% for quote in quotes %}
+            <tr>
+              <th scope="row">
+                  <input type="checkbox" name='symbols' value='{{ quote["symbol"] }}' />
+                  {{ quote["symbol"] }}
+              </th>
+              <td>{{ quote["change"] }}</td>
+              <td>{{ quote["change_percent"] }}</td>
+              <td>{{ quote["last_price"] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <input type="text" style="visibility: hidden;" name="watchlist-name" value="{{ current_watchlist.name }}">
+    </form>
 
 
     <!-- Optional JavaScript -->
