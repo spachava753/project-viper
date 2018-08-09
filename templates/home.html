@@ -53,13 +53,51 @@
         </div>
     </form>
 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Add Watchlist
+    </button>
 
+    <!-- Modal -->
+    <form action="/add-watchlist" method="post">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add a watchlist</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                  <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Name</span>
+                        </div>
+                    <input name="name" type="text" class="form-control" placeholder="Text; Bio" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Description</span>
+                    </div>
+                    <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
 
     <form class="form-inline" action="/add-symbol" method="post">
       <div class="form-group mx-sm-3 mb-2">
         <input type="text" class="form-control" name="symbol" placeholder="GOOG">
       </div>
-        <input type="text" readonly name="watchlist-name" value="{{ current_watchlist.name }}" style="visibility: hidden;" />
       <button type="submit" class="btn btn-primary mb-2">Add Symbol</button>
     </form>
 

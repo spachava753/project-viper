@@ -45,8 +45,8 @@ def delete_symbol():
 @app.route('/add-symbol', methods=['POST'])
 def add_symbol():
     symbol = request.form.get('symbol')
-    watchlist_name = request.form.get('watchlist-name')
-    user_watchlist = get_user_watchlists(session['user_id'], Watchlist.name == watchlist_name)
+    watchlist_name = session['current_watchlist']
+    user_watchlist = get_user_watchlists(session['user_id'], watchlist_name)
     if isinstance(user_watchlist, list):
         user_watchlist = user_watchlist[0]
     add_watchlist_symbol(user_watchlist.id, symbol)
@@ -68,5 +68,15 @@ def watchlist_actions():
         elif request.form.get('action') == 'Select':
             session['current_watchlist'] = watchlist
             return redirect('/get-watchlist', code=302)
+
+    return redirect('/', code=302)
+
+
+@app.route('/add-watchlist', methods=['POST'])
+def add_watchlist():
+    name = request.form.get('name')
+    description = request.form.get('description')
+    if name and description:
+        add_user_watchlists(session['user_id'], name, description)
 
     return redirect('/', code=302)
