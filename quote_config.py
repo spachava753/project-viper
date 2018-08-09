@@ -25,7 +25,8 @@ def get_quote(symbol="GOOG"):
                         "change_percent": quote_data["QuickQuoteResult"]["QuickQuote"]["change_pct"],
                         "change": quote_data["QuickQuoteResult"]["QuickQuote"]["change"],
                         "type": quote_data["QuickQuoteResult"]["QuickQuote"]["assetType"],
-                        "last_price": quote_data["QuickQuoteResult"]["QuickQuote"]["last"]
+                        "last_price": quote_data["QuickQuoteResult"]["QuickQuote"]["last"],
+                        "name": quote_data["QuickQuoteResult"]["QuickQuote"]["name"]
                     }
                 else:
                     return result

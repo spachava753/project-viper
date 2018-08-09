@@ -46,7 +46,9 @@ def delete_symbol():
 def add_symbol():
     symbol = request.form.get('symbol')
     watchlist_name = request.form.get('watchlist-name')
-    user_watchlist = get_user_watchlists(session['user_id'], Watchlist.name == watchlist_name).first()
+    user_watchlist = get_user_watchlists(session['user_id'], Watchlist.name == watchlist_name)
+    if isinstance(user_watchlist, list):
+        user_watchlist = user_watchlist[0]
     add_watchlist_symbol(user_watchlist.id, symbol)
     return redirect('/get-watchlist', code=302)
 
