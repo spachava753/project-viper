@@ -16,7 +16,9 @@ session.add(user)
 # commit the record the database
 session.commit()"""
 
-sqlite_session = get_sqlite_session()
+
+# Test deletion of watchlist_items
+"""sqlite_session = get_sqlite_session()
 
 watchlist_items = sqlite_session.query(WatchlistItem) \
     .filter(WatchlistItem.watchlist_id == 1)
@@ -32,4 +34,14 @@ watchlist_items = sqlite_session.query(WatchlistItem) \
     .filter(WatchlistItem.watchlist_id == 1)
 
 for watchlist_item in watchlist_items:
-    print(watchlist_item.symbol.symbol, watchlist_item.id, sep=", ")
+    print(watchlist_item.symbol.symbol, watchlist_item.id, sep=", ")"""
+
+# Test deletion of watchlist
+sqlite_session = get_sqlite_session()
+user_id = 41
+watchlist = 'Bio'
+watchlists_query = sqlite_session.query(Watchlist).filter(Watchlist.user_id == user_id, Watchlist.name == watchlist)
+watchlist = watchlists_query.first()
+sqlite_session.query(WatchlistItem).filter(WatchlistItem.watchlist_id == watchlist.id).delete()
+watchlists_query.delete()
+sqlite_session.commit()

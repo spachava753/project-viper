@@ -10,7 +10,7 @@ from app import app
 
 @app.route('/')
 def home():
-    if not session.get('logged_in'):
+    if not session.get('logged_in') or not session['user_id']:
         return render_template('login.html')
     else:
         watchlists = get_user_watchlists(session['user_id'])

@@ -30,7 +30,7 @@ class User(Base):
     id = Column(Integer, primary_key=True, default=id_generator)
     username = Column(String)
     password = Column(String)
-    watchlists = relationship("Watchlist")
+    watchlists = relationship("Watchlist", cascade="save-update, merge, delete")
 
     # ----------------------------------------------------------------------
     def __init__(self, username, password, id=None):
@@ -46,7 +46,7 @@ class Watchlist(Base):
     __tablename__ = "watchlists"
 
     id = Column(Integer, primary_key=True, default=id_generator)
-    watchlist_items = relationship("WatchlistItem")
+    watchlist_items = relationship("WatchlistItem", cascade="save-update, merge, delete")
     user_id = Column(Integer, ForeignKey('users.id'))
     name = Column(String)
     description = Column(String)
