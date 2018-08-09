@@ -14,8 +14,17 @@ from app import app
 @app.route('/get-watchlist', methods=['POST', 'GET'])
 def get_watchlist():
     watchlists = get_user_watchlists(session['user_id'])
-    current_watchlist = watchlists[0]
-    watchlists = watchlists[1:]
+    print("watchlists:", watchlists)
+    if session['current_watchlist']:
+        print("current watchlist:", session['current_watchlist'])
+        for index, watchlist in enumerate(watchlists):
+            if watchlist.name == session['current_watchlist']:
+                current_watchlist = watchlist
+                watchlists = watchlists[:index] + watchlists[index + 1:]
+                break
+    else:
+        current_watchlist = watchlists[0]
+        watchlists = watchlists[1:]
     symbols = get_watchlist_symbols(current_watchlist.id)
     quotes = get_all_quotes(symbols)
     return render_template('home.html', current_watchlist=current_watchlist, watchlists=watchlists, quotes=quotes)
@@ -40,3 +49,22 @@ def add_symbol():
     user_watchlist = get_user_watchlists(session['user_id'], Watchlist.name == watchlist_name).first()
     add_watchlist_symbol(user_watchlist.id, symbol)
     return redirect('/get-watchlist', code=302)
+
+
+@app.route('/action-watchlist', methods=['POST', 'GET'])
+def watchlist_actions():
+    watchlist = request.form.get('watchlist-selected')
+    if watchlist:
+        if request.form.get('action') == 'Delete':
+            # noinspection PyBroadException
+            try:
+                delete_user_watchlists(session['user_id'], watchlist)
+            except Exception as e:
+                print(e)
+                return redirect('/login', code=302)
+
+        elif request.form.get('action') == 'Select':
+            session['current_watchlist'] = watchlist
+            return redirect('/get-watchlist', code=302)
+
+    return redirect('/', code=302)

@@ -14,7 +14,7 @@ def home():
         return render_template('login.html')
     else:
         watchlists = get_user_watchlists(session['user_id'])
-        print("watchlists: ", watchlists)
+        print("watchlists length: ", watchlists)
         current_watchlist = watchlists[0]
         watchlists = watchlists[1:]
         symbols = get_watchlist_symbols(current_watchlist.id)

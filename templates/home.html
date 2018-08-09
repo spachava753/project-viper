@@ -38,13 +38,19 @@
         </ul>
     </nav>
 
-    <form method="post" action="/get-watchlist" class="w-25 mx-auto">
-        <select class="custom-select custom-select-lg mb-3">
-          <option selected>{{ current_watchlist.name }}</option>
-          {% for watchlist in watchlists %}
-          <option value="{{ watchlist.name }}">{{ watchlist.name }}</option>
-          {% endfor %}
-        </select>
+    <form action="/action-watchlist" method="post">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend" id="button-addon3">
+            <input type="submit" class="btn btn-outline-secondary btn-sm h-75" name="action" value="Select" />
+            <input type="submit" class="btn btn-outline-secondary btn-sm h-75" name="action" value="Delete" />
+          </div>
+          <select name="watchlist-selected" class="custom-select custom-select-lg mb-3">
+            <option selected>{{ current_watchlist.name }}</option>
+            {% for watchlist in watchlists %}
+            <option value="{{ watchlist.name }}">{{ watchlist.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
     </form>
 
     <form class="form-inline" action="/add-symbol" method="post">
@@ -80,7 +86,6 @@
         </table>
         <input type="text" style="visibility: hidden;" name="watchlist-name" value="{{ current_watchlist.name }}">
     </form>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
