@@ -1,100 +1,51 @@
-from sqlalchemy import *
-from sqlalchemy import create_engine, ForeignKey
-from sqlalchemy import Column, Date, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, backref, sessionmaker
+from app import app
+from flask_sqlalchemy import SQLAlchemy
 
-engine = create_engine('sqlite:///viper.db', echo=False)
-Base = declarative_base()
+db: SQLAlchemy = SQLAlchemy(app)
 
 
-def get_sqlite_session():
-    SqliteSession = sessionmaker(bind=engine)
-    return SqliteSession()
+# ------------------------------------------------------------------------
 
 
-id_increment = 7
-
-
-def id_generator():
-    global id_increment
-    id_increment += 1
-    return id_increment
-
-
-########################################################################
-class User(Base):
+class User(db.Model):
     """"""
     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True, default=id_generator)
-    username = Column(String)
-    password = Column(String)
-    watchlists = relationship("Watchlist", cascade="save-update, merge, delete")
-
-    # ----------------------------------------------------------------------
-    def __init__(self, username, password, id=None):
-        """"""
-        self.username = username
-        self.password = password
-        if id:
-            self.id = id
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String, unique=True)
+    password = db.Column(db.String)
+    watchlists = db.relationship("Watchlist", cascade="save-update, merge, delete")
 
 
-class Watchlist(Base):
+class Watchlist(db.Model):
     """"""
     __tablename__ = "watchlists"
 
-    id = Column(Integer, primary_key=True, default=id_generator)
-    watchlist_items = relationship("WatchlistItem", cascade="save-update, merge, delete")
-    user_id = Column(Integer, ForeignKey('users.id'))
-    name = Column(String)
-    description = Column(String)
-
-    # ----------------------------------------------------------------------
-    def __init__(self, user_id, name, description, id=None):
-        """"""
-        self.user_id = user_id
-        self.name = name
-        self.description = description
-        if id:
-            self.id = id
+    id = db.Column(db.Integer, primary_key=True)
+    watchlist_items = db.relationship("WatchlistItem", cascade="save-update, merge, delete")
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    name = db.Column(db.String)
+    description = db.Column(db.String)
 
 
-class WatchlistItem(Base):
+class WatchlistItem(db.Model):
     """"""
     __tablename__ = "watchlist_items"
 
-    id = Column(Integer, primary_key=True, default=id_generator)
-    watchlist_id = Column(Integer, ForeignKey('watchlists.id'))
-    symbol_id = Column(Integer, ForeignKey('symbols.id'))
-    symbol = relationship("Symbol")
-
-    # ----------------------------------------------------------------------
-    def __init__(self, watchlist_id, symbol_id, id=None):
-        """"""
-        self.watchlist_id = watchlist_id
-        self.symbol_id = symbol_id
-        if id:
-            self.id = id
+    id = db.Column(db.Integer, primary_key=True)
+    watchlist_id = db.Column(db.Integer, db.ForeignKey('watchlists.id'))
+    symbol_id = db.Column(db.Integer, db.ForeignKey('symbols.id'))
+    symbol = db.relationship("Symbol")
 
 
-class Symbol(Base):
+class Symbol(db.Model):
     """"""
     __tablename__ = "symbols"
 
-    id = Column(Integer, primary_key=True, default=id_generator)
-    name = Column(String)
-    symbol = Column(String)
-
-    # ----------------------------------------------------------------------
-    def __init__(self, name, symbol, id=None):
-        """"""
-        self.name = name
-        self.symbol = symbol
-        if id:
-            self.id = id
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    symbol = db.Column(db.String)
 
 
 # create tables
-Base.metadata.create_all(engine)
+db.create_all()

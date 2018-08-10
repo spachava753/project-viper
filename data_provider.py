@@ -1,4 +1,4 @@
-from tabledef import get_sqlite_session, User, Watchlist, WatchlistItem, Symbol
+from tabledef import User, Watchlist, WatchlistItem, Symbol, db
 from quote_provider import get_name_of_symbol
 
 

@@ -1,9 +1,11 @@
-from tabledef import *
-from flask import Flask
-import random, hashlib, os
+import hashlib
+import random
 
-if not os.path.exists('viper.db'):
-    import tabledef
+from flask import Flask
+
 app = Flask(__name__)
 rand_int = str(random.randint(1, 1001))
 app.secret_key = hashlib.sha256(rand_int.encode()).hexdigest()
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///viper.db'
+app.config['SQLALCHEMY_ECHO'] = False
