@@ -1,6 +1,7 @@
 from tabledef import get_sqlite_session, User, Watchlist, WatchlistItem, Symbol
 from quote_provider import get_name_of_symbol
 
+
 def get_users():
     sqlite_session = get_sqlite_session()
     return sqlite_session.query(User)
@@ -16,7 +17,8 @@ def get_user_watchlists(user_id, watchlist_filter=""):
     if user_id:
         sqlite_session = get_sqlite_session()
         if watchlist_filter:
-            watchlist_query = sqlite_session.query(Watchlist).filter(Watchlist.user_id == user_id, Watchlist.name == watchlist_filter)
+            watchlist_query = sqlite_session.query(Watchlist).filter(Watchlist.user_id == user_id,
+                                                                     Watchlist.name == watchlist_filter)
         else:
             watchlist_query = sqlite_session.query(Watchlist).filter(Watchlist.user_id == user_id)
         return watchlist_query.all()
