@@ -1,10 +1,4 @@
-from app import app
-from flask_sqlalchemy import SQLAlchemy
-
-db: SQLAlchemy = SQLAlchemy(app)
-
-
-# ------------------------------------------------------------------------
+from app import db
 
 
 class User(db.Model):
@@ -14,7 +8,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True)
     password = db.Column(db.String)
-    watchlists = db.relationship("Watchlist", cascade="save-update, merge, delete")
+    watchlists = db.relationship("Watchlist")
 
 
 class Watchlist(db.Model):
@@ -22,7 +16,7 @@ class Watchlist(db.Model):
     __tablename__ = "watchlists"
 
     id = db.Column(db.Integer, primary_key=True)
-    watchlist_items = db.relationship("WatchlistItem", cascade="save-update, merge, delete")
+    watchlist_items = db.relationship("WatchlistItem")
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     name = db.Column(db.String)
     description = db.Column(db.String)
@@ -45,7 +39,3 @@ class Symbol(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     symbol = db.Column(db.String)
-
-
-# create tables
-db.create_all()
