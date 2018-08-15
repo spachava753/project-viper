@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90f6cab0-9fb6-41c1-9e44-901e5242117f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_data_provider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create.sql.backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_data_provider_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_data_provider_watchlist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_data_provider_watchlist_symbols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project_viper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project_viper.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_provider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reset.sh" beforeDir="false" afterPath="$PROJECT_DIR$/reset.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symbols.csv" beforeDir="false" afterPath="$PROJECT_DIR$/symbols.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabledef.py" beforeDir="false" afterPath="$PROJECT_DIR$/tabledef.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_data_provider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/user.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watchlist.csv" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watchlist_items.csv" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist_items.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,28 +89,73 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-227015461">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="backup" value="1" />
+          <entry key="csv" value="13" />
+          <entry key="py" value="18" />
+          <entry key="re" value="1" />
+          <entry key="sh" value="1" />
+          <entry key="sql" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Bash" value="1" />
+          <entry key="CSV" value="5" />
+          <entry key="DBN-SQL" value="4" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Python" value="18" />
+          <entry key="SQL" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="735" />
+          <entry key="csv" value="47" />
+          <entry key="dummy" value="7" />
+          <entry key="py" value="2236" />
+          <entry key="sql" value="47" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSV" value="32" />
+          <entry key="DBN-SQL" value="47" />
+          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="Python" value="2971" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_data_provider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+            <state relative-caret-position="209">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="29" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
-                <marker date="1533968310182" expanded="true" signature="1422:1560" ph="..." />
-                <marker date="1533968310182" expanded="true" signature="2559:3117" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users.csv">
+        <entry file="file://$PROJECT_DIR$/create.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="3" selection-start-column="3" selection-end-column="3" />
+            <state relative-caret-position="76">
+              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -108,22 +163,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_provider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="337">
+              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
               <folding>
-                <element signature="e#0#59#0" expanded="true" />
-                <marker date="1533968059237" expanded="true" signature="978:1322" ph="..." />
-                <marker date="1533968059237" expanded="true" signature="1599:1626" ph="..." />
+                <element signature="e#0#22#0" expanded="true" />
+                <marker date="1534374391320" expanded="true" signature="2361:2638" ph="..." />
+                <marker date="1534374391320" expanded="true" signature="3172:3567" ph="..." />
+                <marker date="1534374391320" expanded="true" signature="4223:4422" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabledef.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
@@ -131,22 +178,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1533964848423" expanded="true" signature="117:432" ph="..." />
-                <marker date="1533964848423" expanded="true" signature="431:432" ph="..." />
-              </folding>
+            <state relative-caret-position="19">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tabledef.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="209">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="e#45#62#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,12 +238,8 @@
         <option value="$PROJECT_DIR$/static/style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/watchlist.csv" />
-        <option value="$PROJECT_DIR$/watchlist_items.csv" />
         <option value="$PROJECT_DIR$/users.csv" />
-        <option value="$PROJECT_DIR$/symbols.csv" />
         <option value="$PROJECT_DIR$/schema.sql" />
-        <option value="$PROJECT_DIR$/create.sql" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/login.py" />
         <option value="$PROJECT_DIR$/quote_config.py" />
@@ -199,21 +249,28 @@
         <option value="$PROJECT_DIR$/dummy.py" />
         <option value="$PROJECT_DIR$/py_unit_tests.sh" />
         <option value="$PROJECT_DIR$/data_provider_test.py" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/reset.sh" />
-        <option value="$PROJECT_DIR$/tabledef.py" />
         <option value="$PROJECT_DIR$/exceptions.py" />
+        <option value="$PROJECT_DIR$/test_data_provider_watchlist_symbols.py" />
+        <option value="$PROJECT_DIR$/watchlist.csv" />
+        <option value="$PROJECT_DIR$/watchlist_items.csv" />
+        <option value="$PROJECT_DIR$/symbols.csv" />
+        <option value="$PROJECT_DIR$/test_data_provider_user.py" />
+        <option value="$PROJECT_DIR$/test_data_provider_watchlist.py" />
+        <option value="$PROJECT_DIR$/tabledef.py" />
         <option value="$PROJECT_DIR$/data_provider.py" />
+        <option value="$PROJECT_DIR$/create.sql" />
+        <option value="$PROJECT_DIR$/user.csv" />
+        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/test_data_provider.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1853" />
-    <option name="height" value="1037" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="y" value="25" />
+    <option name="width" value="1920" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -227,11 +284,6 @@
               <item name="project_viper" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_viper" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="project_viper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_viper" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -240,8 +292,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../video_preview_py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -297,27 +354,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dummy" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="project_viper" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dummy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="project_viper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -339,20 +375,57 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_data_provider_watchlist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_viper" />
+      <option name="INTERPRETER_OPTIONS" value="-m pytest" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_data_provider_watchlist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest-watchlist" type="tests" factoryName="py.test">
+      <module name="project_viper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_data_provider_watchlist.TestWatchlist&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.dummy" />
+      <item itemvalue="Python tests.pytest-watchlist" />
       <item itemvalue="Bash.reset.sh" />
-      <item itemvalue="Python.data_provider_test" />
       <item itemvalue="Bash.py_unit_tests.sh" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.data_provider_test" />
+      <item itemvalue="Python.test_data_provider_watchlist" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test_data_provider_watchlist" />
         <item itemvalue="Bash.py_unit_tests.sh" />
         <item itemvalue="Python.data_provider_test" />
         <item itemvalue="Bash.reset.sh" />
-        <item itemvalue="Python.dummy" />
       </list>
     </recent_temporary>
   </component>
@@ -369,6 +442,23 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="pytest-watchlist - 2018.08.11 at 19h 00m 17s.xml">
+      <configuration name="pytest-watchlist" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest-watchlist - 2018.08.11 at 19h 00m 25s.xml">
+      <configuration name="pytest-watchlist" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest-watchlist - 2018.08.11 at 19h 03m 12s.xml">
+      <configuration name="pytest-watchlist" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest-watchlist - 2018.08.11 at 19h 04m 36s.xml">
+      <configuration name="pytest-watchlist" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest-watchlist - 2018.08.11 at 19h 08m 31s.xml">
+      <configuration name="pytest-watchlist" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -379,10 +469,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="-30" width="1920" height="1110" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11387507" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.112059765" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="DB Browser" order="3" />
+      <window_info id="Job Explorer" order="4" weight="0.32977587" />
+      <window_info id="Project Explorer" order="5" weight="0.32977587" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4914621" weight="0.32935324" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" sideWeight="0.4997236" weight="0.3294979" />
+      <window_info anchor="bottom" id="Version Control" order="5" sideWeight="0.49806523" weight="0.3294979" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.5085379" side_tool="true" visible="true" weight="0.32935324" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49733192" weight="0.32935324" />
+      <window_info anchor="bottom" id="Console" order="9" />
+      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info active="true" anchor="right" id="Run" order="5" visible="true" weight="0.29669157" />
+      <window_info anchor="right" id="Debug" order="6" sideWeight="0.49519745" weight="0.24439701" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10992529" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -395,7 +510,7 @@
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.4997236" weight="0.3294979" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49806523" weight="0.3294979" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.50800425" side_tool="true" visible="true" weight="0.34623432" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.50800425" side_tool="true" visible="true" weight="0.2965174" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49806523" weight="0.3294979" />
       <window_info anchor="bottom" id="Console" order="10" />
@@ -406,7 +521,7 @@
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="Run" order="5" weight="0.29669157" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -418,6 +533,11 @@
           <url>file://$PROJECT_DIR$/login.py</url>
           <line>15</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_data_provider_watchlist.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -463,13 +583,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viper.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/viper.db" />
     <entry file="file://$PROJECT_DIR$/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -477,69 +591,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/watchlist.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="346" selection-start-line="346" selection-end-line="346" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/symbols.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/watchlist_items.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="2983" selection-start-line="2983" selection-end-line="2983" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/loading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="413" selection-start-line="413" selection-end-line="413" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/werkzeug/local.py" />
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/query.py" />
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/loading.py" />
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/state.py" />
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/flask/app.py" />
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -587,80 +643,130 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/py_unit_tests.sh" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/base.py" />
+    <entry file="file://$PROJECT_DIR$/exceptions.py" />
     <entry file="file://$PROJECT_DIR$/reset.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users.csv">
+    <entry file="file:///usr/lib/python3.6/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        <state relative-caret-position="247">
+          <caret line="1307" selection-start-line="1307" selection-end-line="1307" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabledef.py">
+    <entry file="file://$PROJECT_DIR$/watchlist.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create.sql.backup">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/re">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
+        <state relative-caret-position="-2223" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/test_data_provider_watchlist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="266">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1533964848423" expanded="true" signature="117:432" ph="..." />
-            <marker date="1533964848423" expanded="true" signature="431:432" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1534035050836" expanded="true" signature="142:143" ph="..." />
+            <marker date="1534035050836" expanded="true" signature="142:148" ph="..." />
+            <marker date="1534035050836" expanded="true" signature="184:325" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/symbols.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/exceptions.py">
+    <entry file="file://$PROJECT_DIR$/test_data_provider_user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="1843">
+          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_provider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="337">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <marker date="1533968059237" expanded="true" signature="978:1322" ph="..." />
-            <marker date="1533968059237" expanded="true" signature="1599:1626" ph="..." />
+            <element signature="e#0#22#0" expanded="true" />
+            <marker date="1534374391320" expanded="true" signature="2361:2638" ph="..." />
+            <marker date="1534374391320" expanded="true" signature="3172:3567" ph="..." />
+            <marker date="1534374391320" expanded="true" signature="4223:4422" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/watchlist_items.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_data_provider_watchlist_symbols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabledef.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_data_provider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+        <state relative-caret-position="209">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1533968310182" expanded="true" signature="1422:1560" ph="..." />
-            <marker date="1533968310182" expanded="true" signature="2559:3117" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="e#45#62#0" expanded="true" />
           </folding>
         </state>
       </provider>

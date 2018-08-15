@@ -1,7 +1,9 @@
-from tabledef import User, Watchlist, WatchlistItem, Symbol
+from tabledef import *
 from app import db
 from quote_provider import get_name_of_symbol
 
+
+# User crud operations
 
 def get_users(user_id="", username=""):
     if user_id:
@@ -44,88 +46,96 @@ def update_user(user_id, username="", password=""):
         raise Exception('Neither username nor user id not was a valid input')
 
 
-"""def get_watchlists(watchlist_id="", user_id="", watchlist_name=""):
+# Watchlist crud operations
+
+def get_watchlist(watchlist_id="", user_id="", watchlist_name=""):
     if watchlist_id:
         return Watchlist.query.get(watchlist_id)
     elif user_id and watchlist_name:
-        return Watchlist.query.filter_by(user_id=user_id, name=watchlist_name)"""
+        return Watchlist.query.filter_by(user_id=user_id, name=watchlist_name).first()
+    elif user_id:
+        return Watchlist.query.filter_by(user_id=user_id).all()
+    else:
+        raise Exception('Neither username nor user id not was a valid input')
 
 
-def __commit():
-    db.session.commit()
+def add_watchlist(watchlist_name, watchlist_description, user_id):
+    if watchlist_name and watchlist_description and user_id:
+        if not get_watchlist(user_id=user_id, watchlist_name=watchlist_name):
+            user = get_users(user_id=user_id)
+            watchlist = Watchlist(user_id=user_id, description=watchlist_description, name=watchlist_name, user=user)
+            db.session.add(watchlist)
+            __commit()
+    else:
+        raise Exception('Neither username nor user id not was a valid input')
 
 
-"""def delete_user_watchlists(user_id, watchlist):
-    if user_id:
-        sqlite_session = get_sqlite_session()
-        watchlists_query = sqlite_session.query(Watchlist).filter(Watchlist.user_id == user_id,
-                                                                  Watchlist.name == watchlist)
-        watchlist = watchlists_query.first()
-        sqlite_session.query(WatchlistItem).filter(WatchlistItem.watchlist_id == watchlist.id).delete()
-        watchlists_query.delete()
-        sqlite_session.commit()
+def delete_watchlist(watchlist_name="", user_id="", watchlist_id=""):
+    if watchlist_id:
+        db.session.delete(get_watchlist(watchlist_id=watchlist_id))
+    elif watchlist_name and user_id:
+        db.session.delete(get_watchlist(user_id=user_id, watchlist_name=watchlist_name))
+    else:
+        raise Exception('No params were supplied')
 
 
-def add_user_watchlists(user_id, watchlist, description):
-    if user_id:
-        sqlite_session = get_sqlite_session()
-        if not sqlite_session.query(Watchlist).filter(Watchlist.name == watchlist).first():
-            sqlite_session.add(Watchlist(user_id, watchlist, description))
-            sqlite_session.commit()
+# Watchlist_item CRUD operations
+def add_watchlist_symbol(watchlist_id, symbol):
+    if watchlist_id:
+        try:
+            watchlist = Watchlist.query.filter_by(id=watchlist_id).first()
+            symbol = __get_symbol(symbol)
+            watchlist_item = WatchlistItem(watchlist=watchlist, symbol=symbol)
+            db.session.add(watchlist_item)
+            __commit()
+        except Exception as e:
+            print(e)
+        finally:
+            db.session.rollback()
+
+
+def delete_watchlist_symbol(watchlist_id, symbol):
+    if watchlist_id:
+        try:
+            watchlist = Watchlist.query.filter_by(id=watchlist_id).first()
+            symbol = __get_symbol(symbol)
+            watchlist_item = WatchlistItem(watchlist=watchlist, symbol=symbol)
+            watchlist_item.delete()
+            __commit()
+        except Exception as e:
+            print(e)
+        finally:
+            db.session.rollback()
 
 
 def get_watchlist_symbols(watchlist_id):
     if watchlist_id:
-        sqlite_session = get_sqlite_session()
-        symbols = []
-        watchlist_items = sqlite_session.query(WatchlistItem).filter(WatchlistItem.watchlist_id == watchlist_id)
-        for watchlist_item in watchlist_items:
-            if watchlist_item and watchlist_item.symbol.symbol:
-                symbols.append(watchlist_item.symbol.symbol)
-        return symbols
-
-
-def add_watchlist_symbol(watchlist_id, symbol):
-    if watchlist_id and symbol:
-        symbol = symbol.upper()
-        sqlite_session = get_sqlite_session()
-        if __add_symbol(symbol):
-            symbol = __get_symbol(symbol)
-            sqlite_session.add(WatchlistItem(watchlist_id, symbol.id))
-            sqlite_session.commit()
-
-
-def __add_symbol(symbol):
-    sqlite_session = get_sqlite_session()
-    symbol_query = sqlite_session.query(Symbol).filter(Symbol.symbol == symbol).first()
-    if not symbol_query and get_name_of_symbol(symbol):
-        sqlite_session.add(Symbol(get_name_of_symbol(symbol), symbol))
-        sqlite_session.commit()
-        return True
-    elif symbol_query:
-        return True
-    else:
-        return False
+        return WatchlistItem.query.filter_by(watchlist_id=watchlist_id).all()
 
 
 def __get_symbol(symbol):
-    sqlite_session = get_sqlite_session()
-    return sqlite_session.query(Symbol).filter(Symbol.symbol == symbol).first()
+    # check if real symbol
+    symbol = symbol.upper()
+    if symbol and get_name_of_symbol(symbol):
+        symbol_query = Symbol.query.filter_by(name=get_name_of_symbol(symbol))
+        if symbol_query:
+            return symbol_query.first()
+        else:
+            __add_symbol(symbol)
+            return __get_symbol(symbol)
+    else:
+        msg = "{} is not a real symbol".format(symbol.upper())
+        raise Exception(msg)
 
 
-def delete_watchlist_symbols(watchlist_id, symbols=[]):
-    if watchlist_id and symbols:
-        sqlite_session = get_sqlite_session()
-        watchlist_items = sqlite_session.query(WatchlistItem) \
-            .filter(WatchlistItem.watchlist_id == 1)
+def __add_symbol(symbol):
+    # check if real symbol
+    symbol = symbol.upper()
+    if symbol and get_name_of_symbol(symbol):
+        symbol = Symbol(name=get_name_of_symbol(symbol), symbol=symbol)
+        db.session.add(symbol)
+        __commit()
 
-        for symbol in symbols:
-            for watchlist_item in watchlist_items:
-                if watchlist_item.symbol.symbol == symbol:
-                    sqlite_session.query(WatchlistItem) \
-                        .filter(WatchlistItem.id == watchlist_item.id) \
-                        .delete()
-                    break
 
-        sqlite_session.commit()
-"""
+def __commit():
+    db.session.commit()

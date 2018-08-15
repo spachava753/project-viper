@@ -1,3 +1,2 @@
-id,user_id,name,description
-1,41,Tech,All Tech Stocks
-2,41,Bio,All Bio Stocks
+1,Tech,All Tech Stocks,41
+2,Bio,All Bio Stocks,41

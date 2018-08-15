@@ -1,0 +1,5 @@
+.mode csv
+.import symbols.csv symbol
+.import user.csv user
+.import watchlist.csv watchlist
+.import watchlist_items.csv watchlist_item
