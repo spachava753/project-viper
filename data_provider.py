@@ -81,7 +81,7 @@ def delete_watchlist(watchlist_name="", user_id="", watchlist_id=""):
 
 # Watchlist_item CRUD operations
 def add_watchlist_symbol(watchlist_id, symbol):
-    if watchlist_id:
+    if watchlist_id and symbol:
         try:
             watchlist = Watchlist.query.filter_by(id=watchlist_id).first()
             symbol = __get_symbol(symbol)
@@ -95,12 +95,13 @@ def add_watchlist_symbol(watchlist_id, symbol):
 
 
 def delete_watchlist_symbol(watchlist_id, symbol):
-    if watchlist_id:
+    if watchlist_id and symbol:
+        symbol = symbol.upper()
         try:
             watchlist = Watchlist.query.filter_by(id=watchlist_id).first()
             symbol = __get_symbol(symbol)
-            watchlist_item = WatchlistItem(watchlist=watchlist, symbol=symbol)
-            watchlist_item.delete()
+            watchlist_item = WatchlistItem.query.filter_by(watchlist_id=watchlist.id, symbol_id=symbol.id).first()
+            db.session.delete(watchlist_item)
             __commit()
         except Exception as e:
             print(e)
@@ -117,8 +118,8 @@ def __get_symbol(symbol):
     # check if real symbol
     symbol = symbol.upper()
     if symbol and get_name_of_symbol(symbol):
-        symbol_query = Symbol.query.filter_by(name=get_name_of_symbol(symbol))
-        if symbol_query:
+        symbol_query = Symbol.query.filter_by(symbol=symbol)
+        if symbol_query and symbol_query.first():
             return symbol_query.first()
         else:
             __add_symbol(symbol)
