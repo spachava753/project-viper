@@ -1,9 +1,8 @@
-#import login
-#import watchlist
-#import home
 from app import *
 from tabledef import *
+from rest_api import *
 import os
+from rest_api.api_config import *
 
 if __name__ == "__main__":
     if os.path.exists('viper.db'):

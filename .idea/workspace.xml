@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90f6cab0-9fb6-41c1-9e44-901e5242117f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rest_api/api_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest_api/symbol_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest_api/user_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest_api/watchlist_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_db_orm/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_provider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_data_provider_watchlist_symbols.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_data_provider_watchlist_symbols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.sql.backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/re" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reset.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_db_orm/test_data_provider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data_provider_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_db_orm/test_data_provider_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data_provider_watchlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data_provider_watchlist_symbols.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist_symbols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watchlist.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +95,7 @@
         <counts>
           <entry key="backup" value="1" />
           <entry key="csv" value="13" />
-          <entry key="py" value="22" />
+          <entry key="py" value="45" />
           <entry key="re" value="1" />
           <entry key="sh" value="1" />
           <entry key="sql" value="5" />
@@ -92,24 +107,26 @@
           <entry key="CSV" value="5" />
           <entry key="DBN-SQL" value="4" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="22" />
+          <entry key="Python" value="45" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.8" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="735" />
           <entry key="csv" value="47" />
-          <entry key="dummy" value="7" />
-          <entry key="py" value="2818" />
+          <entry key="dummy" value="11" />
+          <entry key="py" value="4459" />
           <entry key="sql" value="47" />
           <entry key="txt" value="1" />
         </counts>
@@ -118,8 +135,8 @@
         <counts>
           <entry key="CSV" value="32" />
           <entry key="DBN-SQL" value="47" />
-          <entry key="PLAIN_TEXT" value="23" />
-          <entry key="Python" value="3553" />
+          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="Python" value="5194" />
         </counts>
       </usages-collector>
     </session>
@@ -127,56 +144,63 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_data_provider_watchlist_symbols.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state>
+              <caret selection-end-line="2" selection-end-column="12" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
-                <marker date="1534382295920" expanded="true" signature="441:668" ph="..." />
-                <marker date="1534382295920" expanded="true" signature="707:1152" ph="..." />
+                <element signature="e#45#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data_provider.py">
+        <entry file="file://$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist_symbols.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+            <state relative-caret-position="19">
+              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
-                <marker date="1534382328427" expanded="true" signature="2361:2638" ph="..." />
-                <marker date="1534382328427" expanded="true" signature="3183:3657" ph="..." />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quote_provider.py">
+        <entry file="file://$PROJECT_DIR$/rest_api/api_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest_api/user_api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+                <marker date="1535060251112" expanded="true" signature="113:118" ph="..." />
+                <marker date="1535060251112" expanded="true" signature="288:409" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quote_config.py">
+        <entry file="file://$PROJECT_DIR$/data_provider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabledef.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="133">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,6 +226,7 @@
       <find>ForeignKey</find>
       <find>relationship</find>
       <find>was</find>
+      <find>user</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,7 +246,6 @@
         <option value="$PROJECT_DIR$/quote_config.py" />
         <option value="$PROJECT_DIR$/quote_provider.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/home.py" />
         <option value="$PROJECT_DIR$/dummy.py" />
         <option value="$PROJECT_DIR$/py_unit_tests.sh" />
         <option value="$PROJECT_DIR$/data_provider_test.py" />
@@ -237,16 +261,33 @@
         <option value="$PROJECT_DIR$/user.csv" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/test_data_provider.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/test_data_provider_watchlist_symbols.py" />
         <option value="$PROJECT_DIR$/data_provider.py" />
+        <option value="$PROJECT_DIR$/home.py" />
+        <option value="$PROJECT_DIR$/views/user.py" />
+        <option value="$PROJECT_DIR$/views/user_api.py" />
+        <option value="$PROJECT_DIR$/views/watchlist_api.py" />
+        <option value="$PROJECT_DIR$/views/symbol_api.py" />
+        <option value="$PROJECT_DIR$/rest_api/symbol_api.py" />
+        <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/models/User.py" />
+        <option value="$PROJECT_DIR$/rest_api/api_config.py" />
+        <option value="$PROJECT_DIR$/rest_api/user_api.py" />
+        <option value="$PROJECT_DIR$/rest_api/__init__.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/test_db_orm/__init__.py" />
+        <option value="$PROJECT_DIR$/test_db_orm/test_data_provider.py" />
+        <option value="$PROJECT_DIR$/test_db_orm/test_data_provider_user.py" />
+        <option value="$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist.py" />
+        <option value="$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist_symbols.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="25" />
-    <option name="width" value="1920" />
-    <option name="height" value="1055" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="960" />
+    <option name="y" value="27" />
+    <option name="width" value="960" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -261,6 +302,16 @@
               <item name="project_viper" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_viper" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="project_viper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_viper" type="462c0819:PsiDirectoryNode" />
+              <item name="rest_api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_viper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_viper" type="462c0819:PsiDirectoryNode" />
+              <item name="test_db_orm" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -272,7 +323,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/rest_api" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_db_orm" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -288,7 +344,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.test_data_provider_watchlist_symbols">
+  <component name="RunManager" selected="Python.main">
     <configuration name="py_unit_tests.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <module name="project_viper" />
       <option name="INTERPRETER_OPTIONS" value="bash" />
@@ -311,7 +367,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_data_provider.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_data_provider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -320,7 +376,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" singleton="true" temporary="true">
       <module name="project_viper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -353,7 +409,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_data_provider_watchlist.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_data_provider_watchlist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -388,7 +444,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_data_provider_watchlist.TestWatchlist&quot;" />
+      <option name="_new_target" value="&quot;test_db_orm.test_data_provider_watchlist.TestWatchlist&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -403,7 +459,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_data_provider_watchlist_symbols.TestWatchlistSymbols&quot;" />
+      <option name="_new_target" value="&quot;test_db_orm.test_data_provider_watchlist_symbols.TestWatchlistSymbols&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -479,10 +535,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-30" width="1920" height="1110" extended-state="6" />
+    <frame x="960" y="27" width="960" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.113127" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2297593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -494,18 +550,18 @@
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="4" sideWeight="0.4997236" weight="0.3294979" />
       <window_info anchor="bottom" id="Version Control" order="5" sideWeight="0.49806523" weight="0.3294979" />
-      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.5085379" side_tool="true" visible="true" weight="0.32935324" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.50656456" side_tool="true" visible="true" weight="0.23144105" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49733192" weight="0.32935324" />
-      <window_info anchor="bottom" id="Console" order="9" />
-      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.29585153" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49343544" weight="0.3286026" />
+      <window_info anchor="bottom" id="Console" order="10" />
+      <window_info anchor="bottom" id="DB Execution Console" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
-      <window_info active="true" anchor="right" id="Run" order="5" visible="true" weight="0.29669157" />
-      <window_info anchor="right" id="Debug" order="6" sideWeight="0.49519745" weight="0.24439701" />
+      <window_info anchor="right" id="R Graphics" order="3" weight="0.32932165" />
+      <window_info anchor="right" id="R Packages" order="4" weight="0.32932165" />
+      <window_info anchor="right" id="Debug" order="5" sideWeight="0.49519745" weight="0.24439701" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10992529" />
@@ -541,12 +597,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/login.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_data_provider_watchlist.py</url>
+          <url>file://$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist.py</url>
           <line>23</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
@@ -556,7 +607,7 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_data_provider_watchlist_symbols.py</url>
+          <url>file://$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist_symbols.py</url>
           <line>17</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
@@ -624,16 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -642,23 +683,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dummy.py" />
-    <entry file="file://$PROJECT_DIR$/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py_unit_tests.sh" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/base.py" />
     <entry file="file://$PROJECT_DIR$/exceptions.py" />
-    <entry file="file://$PROJECT_DIR$/reset.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/reset.sh" />
     <entry file="file:///usr/lib/python3.6/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -669,39 +697,10 @@
     <entry file="file://$PROJECT_DIR$/watchlist.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/create.sql.backup">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/re">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2223" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data_provider_watchlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1534035050836" expanded="true" signature="142:143" ph="..." />
-            <marker date="1534035050836" expanded="true" signature="142:148" ph="..." />
-            <marker date="1534035050836" expanded="true" signature="184:325" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/create.sql.backup" />
+    <entry file="file://$PROJECT_DIR$/re" />
     <entry file="file://$PROJECT_DIR$/symbols.csv">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data_provider_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/watchlist_items.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -717,37 +716,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding>
-            <element signature="e#45#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data_provider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,26 +744,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_data_provider_watchlist_symbols.py">
+    <entry file="file://$PROJECT_DIR$/create.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1534382295920" expanded="true" signature="441:668" ph="..." />
-            <marker date="1534382295920" expanded="true" signature="707:1152" ph="..." />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest_api/watchlist_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest_api/symbol_api.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_provider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+        <state relative-caret-position="133">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <marker date="1534382328427" expanded="true" signature="2361:2638" ph="..." />
-            <marker date="1534382328427" expanded="true" signature="3183:3657" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/User.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest_api/user_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+            <marker date="1535060251112" expanded="true" signature="113:118" ph="..." />
+            <marker date="1535060251112" expanded="true" signature="288:409" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest_api/api_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest_api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_db_orm/test_data_provider_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_db_orm/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_db_orm/test_data_provider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+            <marker date="1535061834177" expanded="true" signature="140:141" ph="..." />
+            <marker date="1535061834177" expanded="true" signature="140:146" ph="..." />
+            <marker date="1535061834177" expanded="true" signature="182:323" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="12" />
+          <folding>
+            <element signature="e#45#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_db_orm/test_data_provider_watchlist_symbols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
