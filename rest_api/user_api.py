@@ -1,14 +1,27 @@
 from flask import request, jsonify
+from marshmallow import fields
 
 from data_provider import *
 from rest_api.api_config import ma
 from app import app
 from tabledef import User
 
+import hashlib
+
+
+class PasswordField(fields.Field):
+    def _serialize(self, value, attr, obj):
+        hash_password = hashlib.sha224(value.encode('utf-8')).hexdigest()
+        return hash_password
+
+    def _deserialize(self, value, attr, data):
+        pass
+
 
 class UserSchema(ma.ModelSchema):
     class Meta:
         model = User
+    password = PasswordField(attribute="password")
 
 
 user_schema = UserSchema()
