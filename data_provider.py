@@ -71,12 +71,13 @@ def add_watchlist(watchlist_name, watchlist_description, user_id):
 
 
 def delete_watchlist(watchlist_name="", user_id="", watchlist_id=""):
-    if watchlist_id:
+    if watchlist_id and get_watchlist(watchlist_id=watchlist_id):
         db.session.delete(get_watchlist(watchlist_id=watchlist_id))
-    elif watchlist_name and user_id:
+    elif watchlist_name and user_id and get_watchlist(user_id=user_id, watchlist_name=watchlist_name):
         db.session.delete(get_watchlist(user_id=user_id, watchlist_name=watchlist_name))
     else:
         raise Exception('No params were supplied')
+    __commit()
 
 
 # Watchlist_item CRUD operations
@@ -84,7 +85,7 @@ def add_watchlist_symbol(watchlist_id, symbol):
     if watchlist_id and symbol:
         try:
             watchlist = Watchlist.query.filter_by(id=watchlist_id).first()
-            symbol = __get_symbol(symbol)
+            symbol = get_symbol(symbol)
             watchlist_item = WatchlistItem(watchlist=watchlist, symbol=symbol)
             db.session.add(watchlist_item)
             __commit()
@@ -99,7 +100,7 @@ def delete_watchlist_symbol(watchlist_id, symbol):
         symbol = symbol.upper()
         try:
             watchlist = Watchlist.query.filter_by(id=watchlist_id).first()
-            symbol = __get_symbol(symbol)
+            symbol = get_symbol(symbol)
             watchlist_item = WatchlistItem.query.filter_by(watchlist_id=watchlist.id, symbol_id=symbol.id).first()
             db.session.delete(watchlist_item)
             __commit()
@@ -114,7 +115,12 @@ def get_watchlist_symbols(watchlist_id):
         return WatchlistItem.query.filter_by(watchlist_id=watchlist_id).all()
 
 
-def __get_symbol(symbol):
+def get_symbol(symbol="", symbol_id=""):
+    if not symbol and not symbol_id:
+        raise Exception("get_symbol did not get valid inputs")
+    if symbol_id:
+        return Symbol.query.filter_by(id=symbol_id).first()
+
     # check if real symbol
     symbol = symbol.upper()
     if symbol and get_name_of_symbol(symbol):
@@ -123,7 +129,7 @@ def __get_symbol(symbol):
             return symbol_query.first()
         else:
             __add_symbol(symbol)
-            return __get_symbol(symbol)
+            return get_symbol(symbol)
     else:
         msg = "{} is not a real symbol".format(symbol.upper())
         raise Exception(msg)

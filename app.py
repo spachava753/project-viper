@@ -1,5 +1,6 @@
 import hashlib
 import random
+import os
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -20,3 +21,15 @@ def create_app(name):
 app = create_app(__name__)
 # create a db
 db: SQLAlchemy = SQLAlchemy(app)
+if os.path.exists('/home/shashank/working/dev/projects/py/web_apps/project_viper/viper.db'):
+    os.remove('/home/shashank/working/dev/projects/py/web_apps/project_viper/viper.db')
+else:
+    print("viper.db doesn't exist")
+
+from tabledef import *
+
+db.create_all()
+db.app = app
+
+os.chdir('/home/shashank/working/dev/projects/py/web_apps/project_viper')
+os.system('sqlite3 viper.db < create.sql')

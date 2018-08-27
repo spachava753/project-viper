@@ -27,4 +27,10 @@ class TestWatchlist(object):
             print(watchlist.name)
 
     def test_delete_watchlists(self):
-        pass
+        user_id = 41
+        watchlist_id = 2
+        original_len = len(get_watchlist(user_id=user_id))
+        delete_watchlist(watchlist_id=watchlist_id)
+        watchlists = get_watchlist(user_id=user_id)
+        new_len = len(watchlists)
+        assert new_len == original_len - 1
